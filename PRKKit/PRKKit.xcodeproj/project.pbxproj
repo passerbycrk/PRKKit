@@ -1,0 +1,649 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		DF2E5F321BE3882700A3CD50 /* PRKKit.h in Headers */ = {isa = PBXBuildFile; fileRef = DF2E5F311BE3882700A3CD50 /* PRKKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DF2E5FA81BE389FB00A3CD50 /* PRKAlertView.h in Headers */ = {isa = PBXBuildFile; fileRef = DF2E5F651BE389FB00A3CD50 /* PRKAlertView.h */; settings = {ASSET_TAGS = (); }; };
+		DF2E5FA91BE389FB00A3CD50 /* PRKAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = DF2E5F661BE389FB00A3CD50 /* PRKAlertView.m */; settings = {ASSET_TAGS = (); }; };
+		DF2E5FAA1BE389FB00A3CD50 /* PRKPagingScrollView.h in Headers */ = {isa = PBXBuildFile; fileRef = DF2E5F681BE389FB00A3CD50 /* PRKPagingScrollView.h */; settings = {ASSET_TAGS = (); }; };
+		DF2E5FAB1BE389FB00A3CD50 /* PRKPagingScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = DF2E5F691BE389FB00A3CD50 /* PRKPagingScrollView.m */; settings = {ASSET_TAGS = (); }; };
+		DF2E5FAE1BE389FB00A3CD50 /* PRKProgressView.h in Headers */ = {isa = PBXBuildFile; fileRef = DF2E5F6E1BE389FB00A3CD50 /* PRKProgressView.h */; settings = {ASSET_TAGS = (); }; };
+		DF2E5FAF1BE389FB00A3CD50 /* PRKProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = DF2E5F6F1BE389FB00A3CD50 /* PRKProgressView.m */; settings = {ASSET_TAGS = (); }; };
+		DF2E5FB01BE389FB00A3CD50 /* NSObject+ClassName.h in Headers */ = {isa = PBXBuildFile; fileRef = DF2E5F721BE389FB00A3CD50 /* NSObject+ClassName.h */; settings = {ASSET_TAGS = (); }; };
+		DF2E5FB11BE389FB00A3CD50 /* NSObject+ClassName.m in Sources */ = {isa = PBXBuildFile; fileRef = DF2E5F731BE389FB00A3CD50 /* NSObject+ClassName.m */; settings = {ASSET_TAGS = (); }; };
+		DF2E5FB21BE389FB00A3CD50 /* UITableViewAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = DF2E5F741BE389FB00A3CD50 /* UITableViewAdditions.h */; settings = {ASSET_TAGS = (); }; };
+		DF2E5FB31BE389FB00A3CD50 /* UITableViewAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = DF2E5F751BE389FB00A3CD50 /* UITableViewAdditions.m */; settings = {ASSET_TAGS = (); }; };
+		DF2E5FB41BE389FB00A3CD50 /* UIViewAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = DF2E5F761BE389FB00A3CD50 /* UIViewAdditions.h */; settings = {ASSET_TAGS = (); }; };
+		DF2E5FB51BE389FB00A3CD50 /* UIViewAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = DF2E5F771BE389FB00A3CD50 /* UIViewAdditions.m */; settings = {ASSET_TAGS = (); }; };
+		DF2E5FB61BE389FB00A3CD50 /* UIWindow+RscExt.h in Headers */ = {isa = PBXBuildFile; fileRef = DF2E5F781BE389FB00A3CD50 /* UIWindow+RscExt.h */; settings = {ASSET_TAGS = (); }; };
+		DF2E5FB71BE389FB00A3CD50 /* UIWindow+RscExt.m in Sources */ = {isa = PBXBuildFile; fileRef = DF2E5F791BE389FB00A3CD50 /* UIWindow+RscExt.m */; settings = {ASSET_TAGS = (); }; };
+		DF2E5FB81BE389FB00A3CD50 /* PRKSearchDisplayController.h in Headers */ = {isa = PBXBuildFile; fileRef = DF2E5F7B1BE389FB00A3CD50 /* PRKSearchDisplayController.h */; settings = {ASSET_TAGS = (); }; };
+		DF2E5FB91BE389FB00A3CD50 /* PRKSearchDisplayController.m in Sources */ = {isa = PBXBuildFile; fileRef = DF2E5F7C1BE389FB00A3CD50 /* PRKSearchDisplayController.m */; settings = {ASSET_TAGS = (); }; };
+		DF2E5FBA1BE389FB00A3CD50 /* PRKTableViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = DF2E5F7D1BE389FB00A3CD50 /* PRKTableViewController.h */; settings = {ASSET_TAGS = (); }; };
+		DF2E5FBB1BE389FB00A3CD50 /* PRKTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DF2E5F7E1BE389FB00A3CD50 /* PRKTableViewController.m */; settings = {ASSET_TAGS = (); }; };
+		DF2E5FBC1BE389FB00A3CD50 /* PRKTableViewKit.h in Headers */ = {isa = PBXBuildFile; fileRef = DF2E5F7F1BE389FB00A3CD50 /* PRKTableViewKit.h */; settings = {ASSET_TAGS = (); }; };
+		DF2E5FBD1BE389FB00A3CD50 /* PRKTableViewCell.h in Headers */ = {isa = PBXBuildFile; fileRef = DF2E5F821BE389FB00A3CD50 /* PRKTableViewCell.h */; settings = {ASSET_TAGS = (); }; };
+		DF2E5FBE1BE389FB00A3CD50 /* PRKTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DF2E5F831BE389FB00A3CD50 /* PRKTableViewCell.m */; settings = {ASSET_TAGS = (); }; };
+		DF2E5FBF1BE389FB00A3CD50 /* PRKTableViewDataSource.h in Headers */ = {isa = PBXBuildFile; fileRef = DF2E5F851BE389FB00A3CD50 /* PRKTableViewDataSource.h */; settings = {ASSET_TAGS = (); }; };
+		DF2E5FC01BE389FB00A3CD50 /* PRKTableViewDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = DF2E5F861BE389FB00A3CD50 /* PRKTableViewDataSource.m */; settings = {ASSET_TAGS = (); }; };
+		DF2E5FC11BE389FB00A3CD50 /* PRKTableViewSectionedDataSource.h in Headers */ = {isa = PBXBuildFile; fileRef = DF2E5F871BE389FB00A3CD50 /* PRKTableViewSectionedDataSource.h */; settings = {ASSET_TAGS = (); }; };
+		DF2E5FC21BE389FB00A3CD50 /* PRKTableViewSectionedDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = DF2E5F881BE389FB00A3CD50 /* PRKTableViewSectionedDataSource.m */; settings = {ASSET_TAGS = (); }; };
+		DF2E5FC31BE389FB00A3CD50 /* PRKTableViewItem.h in Headers */ = {isa = PBXBuildFile; fileRef = DF2E5F8A1BE389FB00A3CD50 /* PRKTableViewItem.h */; settings = {ASSET_TAGS = (); }; };
+		DF2E5FC41BE389FB00A3CD50 /* PRKTableViewItem.m in Sources */ = {isa = PBXBuildFile; fileRef = DF2E5F8B1BE389FB00A3CD50 /* PRKTableViewItem.m */; settings = {ASSET_TAGS = (); }; };
+		DF2E5FC51BE389FB00A3CD50 /* PRKTableViewSectionObject.h in Headers */ = {isa = PBXBuildFile; fileRef = DF2E5F8C1BE389FB00A3CD50 /* PRKTableViewSectionObject.h */; settings = {ASSET_TAGS = (); }; };
+		DF2E5FC61BE389FB00A3CD50 /* PRKTableViewSectionObject.m in Sources */ = {isa = PBXBuildFile; fileRef = DF2E5F8D1BE389FB00A3CD50 /* PRKTableViewSectionObject.m */; settings = {ASSET_TAGS = (); }; };
+		DF2E5FC71BE389FB00A3CD50 /* PRKTableViewUtil.h in Headers */ = {isa = PBXBuildFile; fileRef = DF2E5F8F1BE389FB00A3CD50 /* PRKTableViewUtil.h */; settings = {ASSET_TAGS = (); }; };
+		DF2E5FC81BE389FB00A3CD50 /* PRKTableViewUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = DF2E5F901BE389FB00A3CD50 /* PRKTableViewUtil.m */; settings = {ASSET_TAGS = (); }; };
+		DF2E5FC91BE389FB00A3CD50 /* PRKTableView.h in Headers */ = {isa = PBXBuildFile; fileRef = DF2E5F931BE389FB00A3CD50 /* PRKTableView.h */; settings = {ASSET_TAGS = (); }; };
+		DF2E5FCA1BE389FB00A3CD50 /* PRKTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = DF2E5F941BE389FB00A3CD50 /* PRKTableView.m */; settings = {ASSET_TAGS = (); }; };
+		DF2E5FCB1BE389FB00A3CD50 /* SVPullToRefresh.h in Headers */ = {isa = PBXBuildFile; fileRef = DF2E5F961BE389FB00A3CD50 /* SVPullToRefresh.h */; settings = {ASSET_TAGS = (); }; };
+		DF2E5FCC1BE389FB00A3CD50 /* UIScrollView+SVInfiniteScrolling.h in Headers */ = {isa = PBXBuildFile; fileRef = DF2E5F971BE389FB00A3CD50 /* UIScrollView+SVInfiniteScrolling.h */; settings = {ASSET_TAGS = (); }; };
+		DF2E5FCD1BE389FB00A3CD50 /* UIScrollView+SVInfiniteScrolling.m in Sources */ = {isa = PBXBuildFile; fileRef = DF2E5F981BE389FB00A3CD50 /* UIScrollView+SVInfiniteScrolling.m */; settings = {ASSET_TAGS = (); }; };
+		DF2E5FCE1BE389FB00A3CD50 /* UIScrollView+SVPullToRefresh.h in Headers */ = {isa = PBXBuildFile; fileRef = DF2E5F991BE389FB00A3CD50 /* UIScrollView+SVPullToRefresh.h */; settings = {ASSET_TAGS = (); }; };
+		DF2E5FCF1BE389FB00A3CD50 /* UIScrollView+SVPullToRefresh.m in Sources */ = {isa = PBXBuildFile; fileRef = DF2E5F9A1BE389FB00A3CD50 /* UIScrollView+SVPullToRefresh.m */; settings = {ASSET_TAGS = (); }; };
+		DF2E5FD01BE389FB00A3CD50 /* AlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF2E5F9D1BE389FB00A3CD50 /* AlertView.swift */; settings = {ASSET_TAGS = (); }; };
+		DF2E5FD11BE389FB00A3CD50 /* HUD.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF2E5F9F1BE389FB00A3CD50 /* HUD.swift */; settings = {ASSET_TAGS = (); }; };
+		DF2E5FD21BE389FB00A3CD50 /* TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF2E5FA11BE389FB00A3CD50 /* TableView.swift */; settings = {ASSET_TAGS = (); }; };
+		DF2E5FD31BE389FB00A3CD50 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF2E5FA21BE389FB00A3CD50 /* TableViewCell.swift */; settings = {ASSET_TAGS = (); }; };
+		DF2E5FD41BE389FB00A3CD50 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF2E5FA31BE389FB00A3CD50 /* TableViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		DF2E5FD51BE389FB00A3CD50 /* TableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF2E5FA41BE389FB00A3CD50 /* TableViewDataSource.swift */; settings = {ASSET_TAGS = (); }; };
+		DF2E5FD61BE389FB00A3CD50 /* TableViewItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF2E5FA51BE389FB00A3CD50 /* TableViewItem.swift */; settings = {ASSET_TAGS = (); }; };
+		DF2E60501BE38B1E00A3CD50 /* PRKFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DF2E604F1BE38B1E00A3CD50 /* PRKFoundation.framework */; };
+		DF2E60521BE38B2300A3CD50 /* JGProgressHUD.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DF2E60511BE38B2300A3CD50 /* JGProgressHUD.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		DF2E5F2E1BE3882700A3CD50 /* PRKKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = PRKKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DF2E5F311BE3882700A3CD50 /* PRKKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PRKKit.h; sourceTree = "<group>"; };
+		DF2E5F331BE3882700A3CD50 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DF2E5F651BE389FB00A3CD50 /* PRKAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PRKAlertView.h; sourceTree = "<group>"; };
+		DF2E5F661BE389FB00A3CD50 /* PRKAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PRKAlertView.m; sourceTree = "<group>"; };
+		DF2E5F681BE389FB00A3CD50 /* PRKPagingScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PRKPagingScrollView.h; sourceTree = "<group>"; };
+		DF2E5F691BE389FB00A3CD50 /* PRKPagingScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PRKPagingScrollView.m; sourceTree = "<group>"; };
+		DF2E5F6E1BE389FB00A3CD50 /* PRKProgressView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PRKProgressView.h; sourceTree = "<group>"; };
+		DF2E5F6F1BE389FB00A3CD50 /* PRKProgressView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PRKProgressView.m; sourceTree = "<group>"; };
+		DF2E5F721BE389FB00A3CD50 /* NSObject+ClassName.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+ClassName.h"; sourceTree = "<group>"; };
+		DF2E5F731BE389FB00A3CD50 /* NSObject+ClassName.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+ClassName.m"; sourceTree = "<group>"; };
+		DF2E5F741BE389FB00A3CD50 /* UITableViewAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UITableViewAdditions.h; sourceTree = "<group>"; };
+		DF2E5F751BE389FB00A3CD50 /* UITableViewAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UITableViewAdditions.m; sourceTree = "<group>"; };
+		DF2E5F761BE389FB00A3CD50 /* UIViewAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIViewAdditions.h; sourceTree = "<group>"; };
+		DF2E5F771BE389FB00A3CD50 /* UIViewAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIViewAdditions.m; sourceTree = "<group>"; };
+		DF2E5F781BE389FB00A3CD50 /* UIWindow+RscExt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIWindow+RscExt.h"; sourceTree = "<group>"; };
+		DF2E5F791BE389FB00A3CD50 /* UIWindow+RscExt.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIWindow+RscExt.m"; sourceTree = "<group>"; };
+		DF2E5F7B1BE389FB00A3CD50 /* PRKSearchDisplayController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PRKSearchDisplayController.h; sourceTree = "<group>"; };
+		DF2E5F7C1BE389FB00A3CD50 /* PRKSearchDisplayController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PRKSearchDisplayController.m; sourceTree = "<group>"; };
+		DF2E5F7D1BE389FB00A3CD50 /* PRKTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PRKTableViewController.h; sourceTree = "<group>"; };
+		DF2E5F7E1BE389FB00A3CD50 /* PRKTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PRKTableViewController.m; sourceTree = "<group>"; };
+		DF2E5F7F1BE389FB00A3CD50 /* PRKTableViewKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PRKTableViewKit.h; sourceTree = "<group>"; };
+		DF2E5F821BE389FB00A3CD50 /* PRKTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PRKTableViewCell.h; sourceTree = "<group>"; };
+		DF2E5F831BE389FB00A3CD50 /* PRKTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PRKTableViewCell.m; sourceTree = "<group>"; };
+		DF2E5F851BE389FB00A3CD50 /* PRKTableViewDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PRKTableViewDataSource.h; sourceTree = "<group>"; };
+		DF2E5F861BE389FB00A3CD50 /* PRKTableViewDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PRKTableViewDataSource.m; sourceTree = "<group>"; };
+		DF2E5F871BE389FB00A3CD50 /* PRKTableViewSectionedDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PRKTableViewSectionedDataSource.h; sourceTree = "<group>"; };
+		DF2E5F881BE389FB00A3CD50 /* PRKTableViewSectionedDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PRKTableViewSectionedDataSource.m; sourceTree = "<group>"; };
+		DF2E5F8A1BE389FB00A3CD50 /* PRKTableViewItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PRKTableViewItem.h; sourceTree = "<group>"; };
+		DF2E5F8B1BE389FB00A3CD50 /* PRKTableViewItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PRKTableViewItem.m; sourceTree = "<group>"; };
+		DF2E5F8C1BE389FB00A3CD50 /* PRKTableViewSectionObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PRKTableViewSectionObject.h; sourceTree = "<group>"; };
+		DF2E5F8D1BE389FB00A3CD50 /* PRKTableViewSectionObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PRKTableViewSectionObject.m; sourceTree = "<group>"; };
+		DF2E5F8F1BE389FB00A3CD50 /* PRKTableViewUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PRKTableViewUtil.h; sourceTree = "<group>"; };
+		DF2E5F901BE389FB00A3CD50 /* PRKTableViewUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PRKTableViewUtil.m; sourceTree = "<group>"; };
+		DF2E5F931BE389FB00A3CD50 /* PRKTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PRKTableView.h; sourceTree = "<group>"; };
+		DF2E5F941BE389FB00A3CD50 /* PRKTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PRKTableView.m; sourceTree = "<group>"; };
+		DF2E5F961BE389FB00A3CD50 /* SVPullToRefresh.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVPullToRefresh.h; sourceTree = "<group>"; };
+		DF2E5F971BE389FB00A3CD50 /* UIScrollView+SVInfiniteScrolling.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIScrollView+SVInfiniteScrolling.h"; sourceTree = "<group>"; };
+		DF2E5F981BE389FB00A3CD50 /* UIScrollView+SVInfiniteScrolling.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+SVInfiniteScrolling.m"; sourceTree = "<group>"; };
+		DF2E5F991BE389FB00A3CD50 /* UIScrollView+SVPullToRefresh.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIScrollView+SVPullToRefresh.h"; sourceTree = "<group>"; };
+		DF2E5F9A1BE389FB00A3CD50 /* UIScrollView+SVPullToRefresh.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+SVPullToRefresh.m"; sourceTree = "<group>"; };
+		DF2E5F9D1BE389FB00A3CD50 /* AlertView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlertView.swift; sourceTree = "<group>"; };
+		DF2E5F9F1BE389FB00A3CD50 /* HUD.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HUD.swift; sourceTree = "<group>"; };
+		DF2E5FA11BE389FB00A3CD50 /* TableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableView.swift; sourceTree = "<group>"; };
+		DF2E5FA21BE389FB00A3CD50 /* TableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
+		DF2E5FA31BE389FB00A3CD50 /* TableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
+		DF2E5FA41BE389FB00A3CD50 /* TableViewDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewDataSource.swift; sourceTree = "<group>"; };
+		DF2E5FA51BE389FB00A3CD50 /* TableViewItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewItem.swift; sourceTree = "<group>"; };
+		DF2E604F1BE38B1E00A3CD50 /* PRKFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PRKFoundation.framework; path = "../PRKFoundation/build/Debug-iphoneos/PRKFoundation.framework"; sourceTree = "<group>"; };
+		DF2E60511BE38B2300A3CD50 /* JGProgressHUD.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JGProgressHUD.framework; path = "/Users/dabing/GIT/PRKKit/Pods/../build/Debug-iphoneos/JGProgressHUD.framework"; sourceTree = "<absolute>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		DF2E5F2A1BE3882700A3CD50 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DF2E60521BE38B2300A3CD50 /* JGProgressHUD.framework in Frameworks */,
+				DF2E60501BE38B1E00A3CD50 /* PRKFoundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		DF2E5F241BE3882700A3CD50 = {
+			isa = PBXGroup;
+			children = (
+				DF2E5F301BE3882700A3CD50 /* PRKKit */,
+				DF2E60531BE38B3000A3CD50 /* Frameworks */,
+				DF2E5F2F1BE3882700A3CD50 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		DF2E5F2F1BE3882700A3CD50 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				DF2E5F2E1BE3882700A3CD50 /* PRKKit.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		DF2E5F301BE3882700A3CD50 /* PRKKit */ = {
+			isa = PBXGroup;
+			children = (
+				DF2E5F311BE3882700A3CD50 /* PRKKit.h */,
+				DF2E5F331BE3882700A3CD50 /* Info.plist */,
+				DF2E5F5F1BE389FB00A3CD50 /* Classes */,
+			);
+			path = PRKKit;
+			sourceTree = "<group>";
+		};
+		DF2E5F5F1BE389FB00A3CD50 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				DF2E5F601BE389FB00A3CD50 /* OC */,
+				DF2E5F9B1BE389FB00A3CD50 /* Swift */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		DF2E5F601BE389FB00A3CD50 /* OC */ = {
+			isa = PBXGroup;
+			children = (
+				DF2E5F641BE389FB00A3CD50 /* PRKAlertView */,
+				DF2E5F671BE389FB00A3CD50 /* PRKPagingScrollView */,
+				DF2E5F6D1BE389FB00A3CD50 /* PRKProgressView */,
+				DF2E5F701BE389FB00A3CD50 /* PRKTableView */,
+			);
+			path = OC;
+			sourceTree = "<group>";
+		};
+		DF2E5F641BE389FB00A3CD50 /* PRKAlertView */ = {
+			isa = PBXGroup;
+			children = (
+				DF2E5F651BE389FB00A3CD50 /* PRKAlertView.h */,
+				DF2E5F661BE389FB00A3CD50 /* PRKAlertView.m */,
+			);
+			path = PRKAlertView;
+			sourceTree = "<group>";
+		};
+		DF2E5F671BE389FB00A3CD50 /* PRKPagingScrollView */ = {
+			isa = PBXGroup;
+			children = (
+				DF2E5F681BE389FB00A3CD50 /* PRKPagingScrollView.h */,
+				DF2E5F691BE389FB00A3CD50 /* PRKPagingScrollView.m */,
+			);
+			path = PRKPagingScrollView;
+			sourceTree = "<group>";
+		};
+		DF2E5F6D1BE389FB00A3CD50 /* PRKProgressView */ = {
+			isa = PBXGroup;
+			children = (
+				DF2E5F6E1BE389FB00A3CD50 /* PRKProgressView.h */,
+				DF2E5F6F1BE389FB00A3CD50 /* PRKProgressView.m */,
+			);
+			path = PRKProgressView;
+			sourceTree = "<group>";
+		};
+		DF2E5F701BE389FB00A3CD50 /* PRKTableView */ = {
+			isa = PBXGroup;
+			children = (
+				DF2E5F7F1BE389FB00A3CD50 /* PRKTableViewKit.h */,
+				DF2E5F711BE389FB00A3CD50 /* Category */,
+				DF2E5F7A1BE389FB00A3CD50 /* Controller */,
+				DF2E5F801BE389FB00A3CD50 /* Table */,
+				DF2E5F8E1BE389FB00A3CD50 /* Util */,
+				DF2E5F911BE389FB00A3CD50 /* View */,
+			);
+			path = PRKTableView;
+			sourceTree = "<group>";
+		};
+		DF2E5F711BE389FB00A3CD50 /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				DF2E5F721BE389FB00A3CD50 /* NSObject+ClassName.h */,
+				DF2E5F731BE389FB00A3CD50 /* NSObject+ClassName.m */,
+				DF2E5F741BE389FB00A3CD50 /* UITableViewAdditions.h */,
+				DF2E5F751BE389FB00A3CD50 /* UITableViewAdditions.m */,
+				DF2E5F761BE389FB00A3CD50 /* UIViewAdditions.h */,
+				DF2E5F771BE389FB00A3CD50 /* UIViewAdditions.m */,
+				DF2E5F781BE389FB00A3CD50 /* UIWindow+RscExt.h */,
+				DF2E5F791BE389FB00A3CD50 /* UIWindow+RscExt.m */,
+			);
+			path = Category;
+			sourceTree = "<group>";
+		};
+		DF2E5F7A1BE389FB00A3CD50 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				DF2E5F7B1BE389FB00A3CD50 /* PRKSearchDisplayController.h */,
+				DF2E5F7C1BE389FB00A3CD50 /* PRKSearchDisplayController.m */,
+				DF2E5F7D1BE389FB00A3CD50 /* PRKTableViewController.h */,
+				DF2E5F7E1BE389FB00A3CD50 /* PRKTableViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		DF2E5F801BE389FB00A3CD50 /* Table */ = {
+			isa = PBXGroup;
+			children = (
+				DF2E5F811BE389FB00A3CD50 /* Cell */,
+				DF2E5F841BE389FB00A3CD50 /* DataSource */,
+				DF2E5F891BE389FB00A3CD50 /* Item */,
+			);
+			path = Table;
+			sourceTree = "<group>";
+		};
+		DF2E5F811BE389FB00A3CD50 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				DF2E5F821BE389FB00A3CD50 /* PRKTableViewCell.h */,
+				DF2E5F831BE389FB00A3CD50 /* PRKTableViewCell.m */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		DF2E5F841BE389FB00A3CD50 /* DataSource */ = {
+			isa = PBXGroup;
+			children = (
+				DF2E5F851BE389FB00A3CD50 /* PRKTableViewDataSource.h */,
+				DF2E5F861BE389FB00A3CD50 /* PRKTableViewDataSource.m */,
+				DF2E5F871BE389FB00A3CD50 /* PRKTableViewSectionedDataSource.h */,
+				DF2E5F881BE389FB00A3CD50 /* PRKTableViewSectionedDataSource.m */,
+			);
+			path = DataSource;
+			sourceTree = "<group>";
+		};
+		DF2E5F891BE389FB00A3CD50 /* Item */ = {
+			isa = PBXGroup;
+			children = (
+				DF2E5F8A1BE389FB00A3CD50 /* PRKTableViewItem.h */,
+				DF2E5F8B1BE389FB00A3CD50 /* PRKTableViewItem.m */,
+				DF2E5F8C1BE389FB00A3CD50 /* PRKTableViewSectionObject.h */,
+				DF2E5F8D1BE389FB00A3CD50 /* PRKTableViewSectionObject.m */,
+			);
+			path = Item;
+			sourceTree = "<group>";
+		};
+		DF2E5F8E1BE389FB00A3CD50 /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				DF2E5F8F1BE389FB00A3CD50 /* PRKTableViewUtil.h */,
+				DF2E5F901BE389FB00A3CD50 /* PRKTableViewUtil.m */,
+			);
+			path = Util;
+			sourceTree = "<group>";
+		};
+		DF2E5F911BE389FB00A3CD50 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				DF2E5F921BE389FB00A3CD50 /* PRKTableView */,
+				DF2E5F951BE389FB00A3CD50 /* SVPullToRefresh */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		DF2E5F921BE389FB00A3CD50 /* PRKTableView */ = {
+			isa = PBXGroup;
+			children = (
+				DF2E5F931BE389FB00A3CD50 /* PRKTableView.h */,
+				DF2E5F941BE389FB00A3CD50 /* PRKTableView.m */,
+			);
+			path = PRKTableView;
+			sourceTree = "<group>";
+		};
+		DF2E5F951BE389FB00A3CD50 /* SVPullToRefresh */ = {
+			isa = PBXGroup;
+			children = (
+				DF2E5F961BE389FB00A3CD50 /* SVPullToRefresh.h */,
+				DF2E5F971BE389FB00A3CD50 /* UIScrollView+SVInfiniteScrolling.h */,
+				DF2E5F981BE389FB00A3CD50 /* UIScrollView+SVInfiniteScrolling.m */,
+				DF2E5F991BE389FB00A3CD50 /* UIScrollView+SVPullToRefresh.h */,
+				DF2E5F9A1BE389FB00A3CD50 /* UIScrollView+SVPullToRefresh.m */,
+			);
+			path = SVPullToRefresh;
+			sourceTree = "<group>";
+		};
+		DF2E5F9B1BE389FB00A3CD50 /* Swift */ = {
+			isa = PBXGroup;
+			children = (
+				DF2E5F9C1BE389FB00A3CD50 /* AlertView */,
+				DF2E5F9E1BE389FB00A3CD50 /* HUD */,
+				DF2E5FA01BE389FB00A3CD50 /* TableView */,
+			);
+			path = Swift;
+			sourceTree = "<group>";
+		};
+		DF2E5F9C1BE389FB00A3CD50 /* AlertView */ = {
+			isa = PBXGroup;
+			children = (
+				DF2E5F9D1BE389FB00A3CD50 /* AlertView.swift */,
+			);
+			path = AlertView;
+			sourceTree = "<group>";
+		};
+		DF2E5F9E1BE389FB00A3CD50 /* HUD */ = {
+			isa = PBXGroup;
+			children = (
+				DF2E5F9F1BE389FB00A3CD50 /* HUD.swift */,
+			);
+			path = HUD;
+			sourceTree = "<group>";
+		};
+		DF2E5FA01BE389FB00A3CD50 /* TableView */ = {
+			isa = PBXGroup;
+			children = (
+				DF2E5FA11BE389FB00A3CD50 /* TableView.swift */,
+				DF2E5FA21BE389FB00A3CD50 /* TableViewCell.swift */,
+				DF2E5FA31BE389FB00A3CD50 /* TableViewController.swift */,
+				DF2E5FA41BE389FB00A3CD50 /* TableViewDataSource.swift */,
+				DF2E5FA51BE389FB00A3CD50 /* TableViewItem.swift */,
+			);
+			path = TableView;
+			sourceTree = "<group>";
+		};
+		DF2E60531BE38B3000A3CD50 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DF2E60511BE38B2300A3CD50 /* JGProgressHUD.framework */,
+				DF2E604F1BE38B1E00A3CD50 /* PRKFoundation.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		DF2E5F2B1BE3882700A3CD50 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DF2E5FC31BE389FB00A3CD50 /* PRKTableViewItem.h in Headers */,
+				DF2E5FC11BE389FB00A3CD50 /* PRKTableViewSectionedDataSource.h in Headers */,
+				DF2E5FBD1BE389FB00A3CD50 /* PRKTableViewCell.h in Headers */,
+				DF2E5FBC1BE389FB00A3CD50 /* PRKTableViewKit.h in Headers */,
+				DF2E5FAE1BE389FB00A3CD50 /* PRKProgressView.h in Headers */,
+				DF2E5FB61BE389FB00A3CD50 /* UIWindow+RscExt.h in Headers */,
+				DF2E5FBF1BE389FB00A3CD50 /* PRKTableViewDataSource.h in Headers */,
+				DF2E5FBA1BE389FB00A3CD50 /* PRKTableViewController.h in Headers */,
+				DF2E5FAA1BE389FB00A3CD50 /* PRKPagingScrollView.h in Headers */,
+				DF2E5FCB1BE389FB00A3CD50 /* SVPullToRefresh.h in Headers */,
+				DF2E5FCC1BE389FB00A3CD50 /* UIScrollView+SVInfiniteScrolling.h in Headers */,
+				DF2E5FC71BE389FB00A3CD50 /* PRKTableViewUtil.h in Headers */,
+				DF2E5FB01BE389FB00A3CD50 /* NSObject+ClassName.h in Headers */,
+				DF2E5FCE1BE389FB00A3CD50 /* UIScrollView+SVPullToRefresh.h in Headers */,
+				DF2E5FB21BE389FB00A3CD50 /* UITableViewAdditions.h in Headers */,
+				DF2E5FB81BE389FB00A3CD50 /* PRKSearchDisplayController.h in Headers */,
+				DF2E5FA81BE389FB00A3CD50 /* PRKAlertView.h in Headers */,
+				DF2E5F321BE3882700A3CD50 /* PRKKit.h in Headers */,
+				DF2E5FC91BE389FB00A3CD50 /* PRKTableView.h in Headers */,
+				DF2E5FC51BE389FB00A3CD50 /* PRKTableViewSectionObject.h in Headers */,
+				DF2E5FB41BE389FB00A3CD50 /* UIViewAdditions.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		DF2E5F2D1BE3882700A3CD50 /* PRKKit */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DF2E5F361BE3882700A3CD50 /* Build configuration list for PBXNativeTarget "PRKKit" */;
+			buildPhases = (
+				DF2E5F291BE3882700A3CD50 /* Sources */,
+				DF2E5F2A1BE3882700A3CD50 /* Frameworks */,
+				DF2E5F2B1BE3882700A3CD50 /* Headers */,
+				DF2E5F2C1BE3882700A3CD50 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PRKKit;
+			productName = PRKKit;
+			productReference = DF2E5F2E1BE3882700A3CD50 /* PRKKit.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		DF2E5F251BE3882700A3CD50 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0700;
+				ORGANIZATIONNAME = passerbycrk;
+				TargetAttributes = {
+					DF2E5F2D1BE3882700A3CD50 = {
+						CreatedOnToolsVersion = 7.0;
+					};
+				};
+			};
+			buildConfigurationList = DF2E5F281BE3882700A3CD50 /* Build configuration list for PBXProject "PRKKit" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = DF2E5F241BE3882700A3CD50;
+			productRefGroup = DF2E5F2F1BE3882700A3CD50 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				DF2E5F2D1BE3882700A3CD50 /* PRKKit */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		DF2E5F2C1BE3882700A3CD50 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		DF2E5F291BE3882700A3CD50 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DF2E5FC01BE389FB00A3CD50 /* PRKTableViewDataSource.m in Sources */,
+				DF2E5FC21BE389FB00A3CD50 /* PRKTableViewSectionedDataSource.m in Sources */,
+				DF2E5FD01BE389FB00A3CD50 /* AlertView.swift in Sources */,
+				DF2E5FC61BE389FB00A3CD50 /* PRKTableViewSectionObject.m in Sources */,
+				DF2E5FCF1BE389FB00A3CD50 /* UIScrollView+SVPullToRefresh.m in Sources */,
+				DF2E5FB11BE389FB00A3CD50 /* NSObject+ClassName.m in Sources */,
+				DF2E5FB71BE389FB00A3CD50 /* UIWindow+RscExt.m in Sources */,
+				DF2E5FD31BE389FB00A3CD50 /* TableViewCell.swift in Sources */,
+				DF2E5FD51BE389FB00A3CD50 /* TableViewDataSource.swift in Sources */,
+				DF2E5FAF1BE389FB00A3CD50 /* PRKProgressView.m in Sources */,
+				DF2E5FBB1BE389FB00A3CD50 /* PRKTableViewController.m in Sources */,
+				DF2E5FB51BE389FB00A3CD50 /* UIViewAdditions.m in Sources */,
+				DF2E5FD21BE389FB00A3CD50 /* TableView.swift in Sources */,
+				DF2E5FB31BE389FB00A3CD50 /* UITableViewAdditions.m in Sources */,
+				DF2E5FCA1BE389FB00A3CD50 /* PRKTableView.m in Sources */,
+				DF2E5FC81BE389FB00A3CD50 /* PRKTableViewUtil.m in Sources */,
+				DF2E5FC41BE389FB00A3CD50 /* PRKTableViewItem.m in Sources */,
+				DF2E5FAB1BE389FB00A3CD50 /* PRKPagingScrollView.m in Sources */,
+				DF2E5FD11BE389FB00A3CD50 /* HUD.swift in Sources */,
+				DF2E5FBE1BE389FB00A3CD50 /* PRKTableViewCell.m in Sources */,
+				DF2E5FD61BE389FB00A3CD50 /* TableViewItem.swift in Sources */,
+				DF2E5FB91BE389FB00A3CD50 /* PRKSearchDisplayController.m in Sources */,
+				DF2E5FA91BE389FB00A3CD50 /* PRKAlertView.m in Sources */,
+				DF2E5FD41BE389FB00A3CD50 /* TableViewController.swift in Sources */,
+				DF2E5FCD1BE389FB00A3CD50 /* UIScrollView+SVInfiniteScrolling.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		DF2E5F341BE3882700A3CD50 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		DF2E5F351BE3882700A3CD50 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		DF2E5F371BE3882700A3CD50 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"/../Pods/**",
+					"\"$(SRCROOT)\"/../PRKFoundation/**",
+				);
+				INFOPLIST_FILE = PRKKit/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = passerbycrk.PRKKit;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		DF2E5F381BE3882700A3CD50 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"/../Pods/**",
+					"\"$(SRCROOT)\"/../PRKFoundation/**",
+				);
+				INFOPLIST_FILE = PRKKit/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = passerbycrk.PRKKit;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		DF2E5F281BE3882700A3CD50 /* Build configuration list for PBXProject "PRKKit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DF2E5F341BE3882700A3CD50 /* Debug */,
+				DF2E5F351BE3882700A3CD50 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DF2E5F361BE3882700A3CD50 /* Build configuration list for PBXNativeTarget "PRKKit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DF2E5F371BE3882700A3CD50 /* Debug */,
+				DF2E5F381BE3882700A3CD50 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = DF2E5F251BE3882700A3CD50 /* Project object */;
+}
