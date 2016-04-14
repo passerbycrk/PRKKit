@@ -7,7 +7,7 @@
 //
 
 import Foundation
-import PRKFoundation
+//import PRKFoundation
 
 public typealias AlertViewBlock = (index: Int!, title: String!) -> Void
 
@@ -58,7 +58,7 @@ public class AlertView: NSObject {
         alertViewArray.append(self)
     }
     
-    public func addButton(title: String?, var callback: AlertViewBlock?) -> Int? {
+    public func addButton(title: String?,var callback: AlertViewBlock?) -> Int? {
         if nil == title {
             return nil
         }
@@ -104,8 +104,8 @@ public class AlertView: NSObject {
     }
     
     public func show() -> Bool {
-//        if #available(iOS 8.0, *) {
-        if UIDevice.currentDevice().systemVersionNotLowerThan("8") {
+        if #available(iOS 8.0, *) {
+//        if UIDevice.currentDevice().systemVersionNotLowerThan("8") {
             p_UIAlertControllerShow()
         }
         else {
@@ -154,8 +154,8 @@ public class AlertView: NSObject {
             controller.addAction(action)
         }
         // TODO: 需要判断下是否存在
-        let topMostVC: UIViewController! = UIApplication.sharedApplication().keyWindow?.rootViewController?.topmostViewController()
-        topMostVC.presentViewController(controller, animated: true, completion: nil)
+//        let topMostVC: UIViewController! = UIApplication.sharedApplication().keyWindow?.rootViewController?.topmostViewController()
+//        topMostVC.presentViewController(controller, animated: true, completion: nil)
     }
 }
 
