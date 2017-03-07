@@ -13,22 +13,22 @@ public var HUD_ANI_DURATION: Double = 1.5
 
 private var hudArray: [HUD] = [HUD]()
 
-public typealias HUDSettingBlock = (hud: HUD)->Void
+public typealias HUDSettingBlock = (_ hud: HUD)->Void
 
-public class HUD: NSObject {
+open class HUD: NSObject {
     
     public enum HUDLayoutStyle: Int {
-        case Default
-        case Loading
-        case Successed
-        case Error
+        case `default`
+        case loading
+        case successed
+        case error
     }
     
-    private var theLayoutStyle: HUDLayoutStyle = .Default
-    private var theContainerView: UIView?
-    private var hudView: JGProgressHUD?
+    fileprivate var theLayoutStyle: HUDLayoutStyle = .default
+    fileprivate var theContainerView: UIView?
+    fileprivate var hudView: JGProgressHUD?
     
-    public var layoutStyle: HUDLayoutStyle {
+    open var layoutStyle: HUDLayoutStyle {
         get {
             return theLayoutStyle
         }
@@ -37,11 +37,11 @@ public class HUD: NSObject {
                 theLayoutStyle = newValue
                 if nil != hudView {
                     switch theLayoutStyle {
-                    case .Loading:
+                    case .loading:
                         hudView!.indicatorView = JGProgressHUDIndeterminateIndicatorView.init(HUDStyle: hudView!.style)
-                    case .Successed:
+                    case .successed:
                         hudView!.indicatorView = JGProgressHUDSuccessIndicatorView()
-                    case .Error:
+                    case .error:
                         hudView!.indicatorView = JGProgressHUDErrorIndicatorView()
                     default:
                         hudView!.indicatorView = nil
@@ -50,9 +50,9 @@ public class HUD: NSObject {
             }
         }
     }
-    public var duration: Double = HUD_ANI_DURATION
-    public var isIndependent: Bool = false
-    public var message: String? {
+    open var duration: Double = HUD_ANI_DURATION
+    open var isIndependent: Bool = false
+    open var message: String? {
         get {
             return hudView!.textLabel.text
         }
@@ -60,7 +60,7 @@ public class HUD: NSObject {
             hudView!.textLabel.text = newValue
         }
     }
-    public var details: String? {
+    open var details: String? {
         get {
             return hudView!.detailTextLabel.text
         }
@@ -68,7 +68,7 @@ public class HUD: NSObject {
             hudView!.detailTextLabel.text = newValue
         }
     }
-    public var containerView: UIView? {
+    open var containerView: UIView? {
         get {
             return theContainerView
         }
@@ -80,9 +80,10 @@ public class HUD: NSObject {
     
     // MARK: - Public Class Method
     
-    public class func hudWithView(var view: UIView?) -> HUD {
+    public class func hudWithView(_ view: UIView?) -> HUD {
+        var view = view
         if nil == view {
-            let app: UIApplication = UIApplication.sharedApplication()
+            let app: UIApplication = UIApplication.shared
             var window: UIWindow? = app.keyWindow
             if nil == window {
                 window = (app.delegate?.window)!
@@ -92,31 +93,31 @@ public class HUD: NSObject {
         let hud: HUD = HUD.init(coder: NSCoder())!
         hud.hudView = JGProgressHUD.init(style: .Light)
         hud.theContainerView = view
-        hud.layoutStyle = .Default
+        hud.layoutStyle = .default
         hud.hudView!.indicatorView = nil
         hud.hudView!.interactionType = .BlockNoTouches
         hud.hudView!.layer.shadowColor = UIColor.whiteColor().CGColor
-        hud.hudView!.layer.shadowOffset = CGSizeZero
+        hud.hudView!.layer.shadowOffset = CGSize.zero
         hud.hudView!.layer.shadowOpacity = 0.4
         hud.hudView!.layer.shadowRadius = 8.0
         return hud
     }
     
-    public class func hudWithWindow(window: UIWindow?) -> HUD {
+    open class func hudWithWindow(_ window: UIWindow?) -> HUD {
         return self.hudWithView(window)
     }
     
-    public class func hud() -> HUD {
+    open class func hud() -> HUD {
         return self.hudWithView(nil)
     }
     
-    public class func showHudSetting(settingCallback: HUDSettingBlock?) -> HUD {
+    open class func showHudSetting(_ settingCallback: HUDSettingBlock?) -> HUD {
         let hud: HUD = self.hud()
         hud.showHudSetting(settingCallback)
         return hud
     }
     
-    public class func clearMessages() -> Void {
+    open class func clearMessages() -> Void {
         for hud in hudArray {
             hud.hudView!.dismissAnimated(false)
         }
@@ -125,15 +126,15 @@ public class HUD: NSObject {
     
     // MARK: - Public Instance Method
     
-    public func showHudSetting(settingCallback: HUDSettingBlock?) -> HUD {
+    open func showHudSetting(_ settingCallback: HUDSettingBlock?) -> HUD {
         if nil != settingCallback {
-            settingCallback!(hud: self)
+            settingCallback!(self)
         }
         p_pushHudView()
         return self
     }
     
-    public func showInView(view: UIView!, animated: Bool) {
+    open func showInView(_ view: UIView!, animated: Bool) {
         hudView!.showInView(view, animated: animated)
         if duration > 0 {
             p_delay(duration, closure: { () -> () in
@@ -145,7 +146,7 @@ public class HUD: NSObject {
     
     // MARK: - Private
     
-    private func p_pushHudView() -> Void {
+    fileprivate func p_pushHudView() -> Void {
         self.classForCoder.clearMessages()
         if isIndependent {
             self.p_popHudView()
@@ -158,20 +159,16 @@ public class HUD: NSObject {
         }
     }
     
-    private func p_popHudView() -> Void {
+    fileprivate func p_popHudView() -> Void {
         if !isIndependent && hudArray.count <= 0 {
             return
         }
         self.showInView(containerView, animated: true)
     }
     
-    private func p_delay(delay:Double, closure:()->()) {
-        dispatch_after(
-            dispatch_time(
-                DISPATCH_TIME_NOW,
-                Int64(delay * Double(NSEC_PER_SEC))
-            ),
-            dispatch_get_main_queue(), closure)
+    fileprivate func p_delay(_ delay:Double, closure:@escaping ()->()) {
+        DispatchQueue.main.asyncAfter(
+            deadline: DispatchTime.now() + Double(Int64(delay * Double(NSEC_PER_SEC))) / Double(NSEC_PER_SEC), execute: closure)
     }
     
 }

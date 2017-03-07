@@ -9,11 +9,11 @@
 import Foundation
 import UIKit
 
-public class TableViewCell: UITableViewCell, TableViewCellProtocol {
+open class TableViewCell: UITableViewCell, TableViewCellProtocol {
     
-    private var theModel: AnyObject? // NOTE: Custom Model
+    fileprivate var theModel: AnyObject? // NOTE: Custom Model
     
-    public var object: AnyObject? {
+    open var object: AnyObject? {
         get {
             return theModel
         }
@@ -25,7 +25,7 @@ public class TableViewCell: UITableViewCell, TableViewCellProtocol {
         }
     }
     
-    public class func tableView(tableView: UITableView, rowHeightForObject: AnyObject) -> CGFloat {
+    open class func tableView(_ tableView: UITableView, rowHeightForObject: AnyObject) -> CGFloat {
         return 44
     }
 
@@ -37,7 +37,7 @@ public class TableViewCell: UITableViewCell, TableViewCellProtocol {
         fatalError("init(coder:) has not been implemented")
     }
     
-    public override func layoutSubviews() {
+    open override func layoutSubviews() {
         super.layoutSubviews()
     }
 }

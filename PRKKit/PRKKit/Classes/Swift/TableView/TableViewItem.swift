@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-public class TableViewItem: NSObject {
-    public var cellHeight: CGFloat = 0 // For Cache Cell Height
-    public var userInfo: AnyObject?
+open class TableViewItem: NSObject {
+    open var cellHeight: CGFloat = 0 // For Cache Cell Height
+    open var userInfo: AnyObject?
 }

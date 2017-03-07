@@ -10,20 +10,20 @@ import UIKit
 
 @objc
 public protocol TableViewControllerDelegate: NSObjectProtocol {
-    func didSelectObject(object: AnyObject?, atIndexPath indexPath: NSIndexPath)
+    func didSelectObject(_ object: AnyObject?, atIndexPath indexPath: IndexPath)
 }
 
 
-public class TableViewController: UIViewController {
+open class TableViewController: UIViewController {
     
-    private var theDataSource: TableViewDataSource?
+    fileprivate var theDataSource: TableViewDataSource?
     
-    private var theTableView: TableView?
+    fileprivate var theTableView: TableView?
     
-    public var tableView: TableView! {
+    open var tableView: TableView! {
         get {
             if nil == theTableView {
-                theTableView = TableView.init(frame: CGRectZero, style: UITableViewStyle.Plain)
+                theTableView = TableView.init(frame: CGRect.zero, style: UITableViewStyle.plain)
             }
             return theTableView
         }
@@ -33,7 +33,7 @@ public class TableViewController: UIViewController {
             }
         }
     }
-    public var dataSource: TableViewDataSource? {
+    open var dataSource: TableViewDataSource? {
         get {
             return theDataSource
         }
@@ -47,7 +47,7 @@ public class TableViewController: UIViewController {
         super.init(nibName: nil, bundle: nil)
     }
     
-    public override func viewDidLoad() {
+    open override func viewDidLoad() {
         super.viewDidLoad()
         tableView.longPressReorderDelegate = self
         tableView.delegate = self
@@ -56,15 +56,15 @@ public class TableViewController: UIViewController {
         view.addSubview(tableView)
     }
     
-    public override func viewWillAppear(animated: Bool) {
+    open override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        let selectedIndexPath: NSIndexPath? = tableView.indexPathForSelectedRow
+        let selectedIndexPath: IndexPath? = tableView.indexPathForSelectedRow
         if nil != selectedIndexPath {
-            tableView.deselectRowAtIndexPath(selectedIndexPath!, animated: animated)
+            tableView.deselectRow(at: selectedIndexPath!, animated: animated)
         }
     }
 
-    public override func didReceiveMemoryWarning() {
+    open override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
@@ -82,7 +82,7 @@ public class TableViewController: UIViewController {
 
 extension TableViewController: UITableViewDelegate,TableViewControllerDelegate {
    
-    public func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+    public func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         if nil != dataSource {
             let obj: AnyObject? = dataSource!.tableView(tableView, objectForRowAtIndexPath: indexPath)
             if nil != obj {
@@ -94,35 +94,35 @@ extension TableViewController: UITableViewDelegate,TableViewControllerDelegate {
         return 0
     }
     
-    public func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        if nil != dataSource && self.conformsToProtocol(TableViewControllerDelegate) {
+    public func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if nil != dataSource && self.conforms(to: TableViewControllerDelegate) {
             let obj: AnyObject? = dataSource!.tableView(tableView, objectForRowAtIndexPath: indexPath)
             if nil != obj {
-                self.performSelector(Selector("didSelectObject:atIndexPath:"), withObject: obj, withObject: indexPath)
+                self.perform(#selector(TableViewControllerDelegate.didSelectObject(_:atIndexPath:)), with: obj, with: indexPath)
             }
         }
     }
     
-    public func didSelectObject(object: AnyObject?, atIndexPath indexPath: NSIndexPath) {
+    public func didSelectObject(_ object: AnyObject?, atIndexPath indexPath: IndexPath) {
         
     }
 }
 
 extension TableViewController : TableViewDelegate {
     /** Called within an animation block when the dragging view is about to show. The default implementation of this method is empty—no need to call `super`. */
-    public func tableView(tableView: UITableView, showDraggingView view: UIView, atIndexPath indexPath: NSIndexPath) {
+    public func tableView(_ tableView: UITableView, showDraggingView view: UIView, atIndexPath indexPath: IndexPath) {
         // Empty implementation, just to simplify overriding (and to show up in code completion).
     }
     
     /** Called within an animation block when the dragging view is about to hide. The default implementation of this method is empty—no need to call `super`. */
-    public func tableView(tableView: UITableView, hideDraggingView view: UIView, atIndexPath indexPath: NSIndexPath) {
+    public func tableView(_ tableView: UITableView, hideDraggingView view: UIView, atIndexPath indexPath: IndexPath) {
         // Empty implementation, just to simplify overriding (and to show up in code completion).
     }
     
     //
     // Important: Update your data source after the user reorders a cell.
     //
-    public func tableView(tableView: UITableView, moveRowAtIndexPath sourceIndexPath: NSIndexPath, toIndexPath destinationIndexPath: NSIndexPath) {
+    public func tableView(_ tableView: UITableView, moveRowAtIndexPath sourceIndexPath: IndexPath, toIndexPath destinationIndexPath: IndexPath) {
         // Empty implementation, just to simplify overriding (and to show up in code completion).
     }
     
@@ -132,7 +132,7 @@ extension TableViewController : TableViewDelegate {
     //    NOTE: Any changes made here should be reverted in `tableView:cellForRowAtIndexPath:`
     //          to avoid accidentally reusing the modifications.
     //
-    public func tableView(tableView: UITableView, draggingCell cell: UITableViewCell, atIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+    public func tableView(_ tableView: UITableView, draggingCell cell: UITableViewCell, atIndexPath indexPath: IndexPath) -> UITableViewCell {
         return cell
     }
 }

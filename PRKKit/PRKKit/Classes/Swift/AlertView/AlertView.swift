@@ -9,18 +9,18 @@
 import Foundation
 //import PRKFoundation
 
-public typealias AlertViewBlock = (index: Int!, title: String!) -> Void
+public typealias AlertViewBlock = (_ index: Int?, _ title: String?) -> Void
 
 private var alertViewArray: [AlertView] = [AlertView]()
 
-public class AlertView: NSObject {
+open class AlertView: NSObject {
     
-    private var btnTitles: [String] = [String]()
-    private var callbacks: [AlertViewBlock] = [AlertViewBlock]()
-    private var theTitle: String?
-    private var theMessage: String?
-    private var theCancelButtonIdx: Int?
-    public var title: String? {
+    fileprivate var btnTitles: [String] = [String]()
+    fileprivate var callbacks: [AlertViewBlock] = [AlertViewBlock]()
+    fileprivate var theTitle: String?
+    fileprivate var theMessage: String?
+    fileprivate var theCancelButtonIdx: Int?
+    open var title: String? {
         get {
             return theTitle
         }
@@ -28,7 +28,7 @@ public class AlertView: NSObject {
             theTitle = newValue
         }
     }
-    public var message: String? {
+    open var message: String? {
         get {
             return theMessage
         }
@@ -36,7 +36,7 @@ public class AlertView: NSObject {
             theMessage = newValue
         }
     }
-    public var cancelButtonIdx: Int? {
+    open var cancelButtonIdx: Int? {
         get {
             return theCancelButtonIdx
         }
@@ -58,7 +58,8 @@ public class AlertView: NSObject {
         alertViewArray.append(self)
     }
     
-    public func addButton(title: String?,var callback: AlertViewBlock?) -> Int? {
+    public func addButton(_ title: String?,callback: AlertViewBlock?) -> Int? {
+        var callback = callback
         if nil == title {
             return nil
         }
@@ -90,20 +91,20 @@ public class AlertView: NSObject {
         return Int(btnTitles.count-1);
     }
     
-    public func addButton(title: String?) -> Int? {
+    open func addButton(_ title: String?) -> Int? {
         return addButton(title, callback: nil)
     }
     
-    public func addCancelButton(title: String?, callback: AlertViewBlock?) -> Int? {
+    open func addCancelButton(_ title: String?, callback: AlertViewBlock?) -> Int? {
         theCancelButtonIdx = addButton(title, callback: callback)
         return theCancelButtonIdx
     }
     
-    public func addCancelButton(title: String?) -> Int? {
+    open func addCancelButton(_ title: String?) -> Int? {
         return addCancelButton(title, callback: nil)
     }
     
-    public func show() -> Bool {
+    open func show() -> Bool {
         if #available(iOS 8.0, *) {
 //        if UIDevice.currentDevice().systemVersionNotLowerThan("8") {
             p_UIAlertControllerShow()
@@ -114,39 +115,39 @@ public class AlertView: NSObject {
         return false
     }
     
-    private func p_cleanup() -> Void {
-        let idx: Int? = alertViewArray.indexOf(self)
+    fileprivate func p_cleanup() -> Void {
+        let idx: Int? = alertViewArray.index(of: self)
         if nil != idx {
-            alertViewArray.removeAtIndex(idx!)
+            alertViewArray.remove(at: idx!)
         }
     }
     
-    @available (iOS, deprecated=8.0)
-    private func p_UIAlertViewShow() -> Void {
+    @available (iOS, deprecated: 8.0)
+    fileprivate func p_UIAlertViewShow() -> Void {
         let alertView: UIAlertView = UIAlertView.init(title: title!, message: message!, delegate: self, cancelButtonTitle: nil)
         for idx in 0..<self.btnTitles.count {
             let title: String = btnTitles[idx]
             if nil != cancelButtonIdx && cancelButtonIdx == idx {
                 alertView.cancelButtonIndex = self.cancelButtonIdx!
             }
-            alertView.addButtonWithTitle(title)
+            alertView.addButton(withTitle: title)
         }
         alertView.show()
     }
     
     @available (iOS 8.0, *)
-    private func p_UIAlertControllerShow() -> Void {
-        let controller: UIAlertController = UIAlertController.init(title: title, message: message, preferredStyle: .Alert)
+    fileprivate func p_UIAlertControllerShow() -> Void {
+        let controller: UIAlertController = UIAlertController.init(title: title, message: message, preferredStyle: .alert)
 
         for idx in 0..<self.btnTitles.count {
             let title: String = btnTitles[idx]
-            var style: UIAlertActionStyle = .Default
+            var style: UIAlertActionStyle = .default
             if cancelButtonIdx == idx {
-                style = .Cancel
+                style = .cancel
             }
             let action: UIAlertAction = UIAlertAction.init(title: title, style: style, handler: { (theAction) -> Void in
                 let aCallback: AlertViewBlock! = self.callbacks[idx]
-                dispatch_async(dispatch_get_main_queue()) { () -> Void in
+                DispatchQueue.main.async { () -> Void in
                     aCallback(index: idx, title: theAction.title)
                     self.p_cleanup()
                 }
@@ -161,14 +162,14 @@ public class AlertView: NSObject {
 
 extension AlertView: UIAlertViewDelegate {
     
-    public func alertViewCancel(alertView: UIAlertView) {
+    public func alertViewCancel(_ alertView: UIAlertView) {
         self.alertView(alertView, didDismissWithButtonIndex: self.cancelButtonIdx!)
     }
     
-    public func alertView(alertView: UIAlertView, didDismissWithButtonIndex buttonIndex: Int) {
+    public func alertView(_ alertView: UIAlertView, didDismissWithButtonIndex buttonIndex: Int) {
         let aCallback: AlertViewBlock! = callbacks[buttonIndex]
         let title: String! = btnTitles[buttonIndex]
-        dispatch_async(dispatch_get_main_queue()) { () -> Void in
+        DispatchQueue.main.async { () -> Void in
             aCallback(index: buttonIndex, title: title)
             self.p_cleanup()
         }
